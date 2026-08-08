@@ -16,7 +16,7 @@ X-Chat is a full-stack, production-ready real-time room chat application. It all
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech StacK
 
 ### Frontend
 - **Framework**: React.js (Vite)
@@ -231,6 +231,8 @@ VITE_SOCKET_URL=http://localhost:5000
 - [ ] User avatars and customizable profile themes.
 - [ ] Typing indicators in chat rooms.
 - [ ] Read receipts and unread message notifications.
-#   X c h a t  
- #   X c h a t  
+#   X c h a t 
+ 
+ #   X c h a t 
+ 
  
