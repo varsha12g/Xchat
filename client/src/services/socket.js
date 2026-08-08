@@ -1,12 +1,15 @@
 import { io } from 'socket.io-client';
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:5000';
+let rawSocketUrl = (import.meta.env.VITE_SOCKET_URL || import.meta.env.VITE_API_URL || 'http://localhost:5000').trim().replace(/\/+$/, '');
+if (rawSocketUrl.endsWith('/api')) {
+  rawSocketUrl = rawSocketUrl.substring(0, rawSocketUrl.length - 4);
+}
 
 let socket = null;
 
 export const initSocket = () => {
   if (!socket) {
-    socket = io(SOCKET_URL, {
+    socket = io(rawSocketUrl, {
       autoConnect: true,
       reconnection: true,
       reconnectionAttempts: 10,
